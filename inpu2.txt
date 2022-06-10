@@ -1,0 +1,6 @@
+$InputData=preg_split('/\s+/', trim(file_get_contents('input.txt')));
+$A = $InputData[0];
+$B = $InputData[1];
+$C = $A+ $B;
+$FOUT=fopen("output.txt","w");
+fputs($FOUT,$C);
