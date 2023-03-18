@@ -9,3 +9,11 @@ process.stdin.on('data', data => {
      process.stdout.write(res + '');
      process.exit();
 });
+
+//2 sposob
+const [ line1, line2, line3 ] = require('fs')
+    .readFileSync(0, 'utf-8')
+    .trim()
+    .split('\n')
+    .map(s => s.trim().split(/\s+/).map(Number));
+    console.log(+line1 + +line2)
